@@ -8,12 +8,12 @@ const cors = require('cors');
 const { MongoClient } = require('mongodb');
 
 require('dotenv').config();
-require('./api/config/database');
+require('./config/database');
 
 //const usersRouter = require('./api/routes/users')
-const puppiesRouter = require('./api/routes/puppies')
-const countriesRouter = require('./api/routes/countries')
-const usersRouter = require('./api/routes/users')
+const puppiesRouter = require('./routes/puppies')
+const countriesRouter = require('./routes/countries')
+const usersRouter = require('./routes/users')
 
 const app = express();
 app.use(cors());

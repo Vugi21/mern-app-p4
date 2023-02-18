@@ -8,7 +8,8 @@ import {
   Route,
   Routes,
   Navigate,
-  Outlet
+  Outlet,
+  useParams
 } from "react-router-dom";
 import { Component, useEffect, setState } from 'react'
 
@@ -22,12 +23,15 @@ import CountryDetail from './components/CountryDetail/CountryDetail';
 import NewCountry from './components/NewCountry/NewCountry';
 
 
+
 const menuOptions = [
   "home",
   "puppies",
   "login",
   "signup"
 ];
+
+
 
 class App extends Component {
 
@@ -55,13 +59,15 @@ class App extends Component {
     const puppyData = await puppiesList.json()
 
     const countryData = await countriesList.json()
+
+    
     
     this.setState({
       //users: data,
       puppies: puppyData,
       countries: countryData,
-      user: userService.getUser()
-      
+      user: userService.getUser(),
+            
     })
   }
   
