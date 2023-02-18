@@ -1,0 +1,30 @@
+.wrapper .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    flex-basis: 100%;
+    min-height: 380px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .wrapper .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .wrapper .container {
+    padding: 2px 16px;
+    display: flex;
+    flex: 1;
+    
+  }
+
+  .wrapper{
+      display: flex;
+      justify-content: center;
+      width: 450px;
+      margin: auto;
+  }
+  textarea{
+    height: 100px; width: 50%; text-align: justify;
+  }

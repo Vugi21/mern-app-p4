@@ -1,0 +1,44 @@
+.nav{
+    display: flex;
+    flex: 1;
+    height: 40px;
+    background-color: #028900;
+    align-items: center;
+    color: white;
+    font-style: bold;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    margin-left: auto;
+}
+
+.nav ul li{
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul li:hover{
+    cursor: pointer;
+    background-color: rgb(82, 34, 255);
+    font-weight: bold;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: white
+}
+
+.nav ul li.active{
+    background-color: rgb(244, 127, 182);
+}
+.nav ul li span{
+    color: white;
+    font-weight: bold;
+}
