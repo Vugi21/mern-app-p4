@@ -1,1 +1,1 @@
-web: node api/server.js
+web: node mern-app/api/server.js
