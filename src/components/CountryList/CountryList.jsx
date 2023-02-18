@@ -12,8 +12,8 @@ export default function CountryList(props) {
             <>
             
             <tr>
-                <td key={idx}><Link to={`/countries/${idx}`}>{(country.name)} </Link> </td>
-                <td key={idx}>{(country.capital)}</td>
+                <td key={idx+1}><Link to={`/countries/${idx+1}`}>{(country.name)} </Link> </td>
+                <td key={idx+1}>{(country.capital)}</td>
             </tr>
 
             </>  )

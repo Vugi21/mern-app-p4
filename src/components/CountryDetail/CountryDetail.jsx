@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react'
-import { Switch, Link, Route, useParams, useRoutes, BrowserRouter as Router } from 'react-router-dom'
+import { Switch, Link, Route, useParams, useRoutes, Redirect, BrowserRouter as Router } from 'react-router-dom'
 import { getCountries } from '../../services/countries'
 import style from './CountryDetail.module.css'
 
@@ -51,7 +51,7 @@ export default function CountryDetail(props) {
                 <textarea placeholder='Add or Edit interesting facts here...'></textarea>
             </div>
             <button>Add</button>
-            <button>Back</button>
+            <button><Link to="/countries" >Back</Link></button>
         </>
     )
 }
