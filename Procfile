@@ -1,1 +1,1 @@
-web: node mern-app/api/server.js
+web: bin/boot

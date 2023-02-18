@@ -8,12 +8,12 @@ const cors = require('cors');
 const { MongoClient } = require('mongodb');
 
 require('dotenv').config();
-require('./config/database');
+require('./api/config/database');
 
 //const usersRouter = require('./api/routes/users')
-const puppiesRouter = require('./routes/puppies')
-const countriesRouter = require('./routes/countries')
-const usersRouter = require('./routes/users')
+const puppiesRouter = require('./api/routes/puppies')
+const countriesRouter = require('./api/routes/countries')
+const usersRouter = require('./api/routes/users')
 
 const app = express();
 app.use(cors());
@@ -54,7 +54,7 @@ const client = new MongoClient(`${process.env.DATABASE_URL}`,{
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work
 app.get('/*', function(req, res) {
-    //res.sendFile(path.join(__dirname, 'build', 'index.html'));
+   // res.sendFile(path.join(__dirname, 'build', 'index.html'));
     const collection = client.db('test').collection('countries');
     collection.find({}).toArray((err, docs) => {
       if (err) {
